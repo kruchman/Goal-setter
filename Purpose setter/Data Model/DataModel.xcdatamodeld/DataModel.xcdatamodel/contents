@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AchievedGoal" representedClassName=".AchievedGoal" syncable="YES" codeGenerationType="class">
+        <attribute name="title" attributeType="String"/>
+        <relationship name="longGoalAchieved" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LongGoal" inverseName="achieved" inverseEntity="LongGoal"/>
+    </entity>
+    <entity name="DevidedGoal" representedClassName=".DevidedGoal" syncable="YES" codeGenerationType="class">
+        <attribute name="done" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="parentLongGoal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LongGoal" inverseName="goals" inverseEntity="LongGoal"/>
+    </entity>
+    <entity name="LongGoal" representedClassName=".LongGoal" syncable="YES" codeGenerationType="class">
+        <attribute name="done" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="achieved" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AchievedGoal" inverseName="longGoalAchieved" inverseEntity="AchievedGoal"/>
+        <relationship name="goals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DevidedGoal" inverseName="parentLongGoal" inverseEntity="DevidedGoal"/>
+    </entity>
+    <entity name="ShortGoal" representedClassName="ShortGoal" syncable="YES" codeGenerationType="class">
+        <attribute name="done" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String"/>
+    </entity>
+</model>

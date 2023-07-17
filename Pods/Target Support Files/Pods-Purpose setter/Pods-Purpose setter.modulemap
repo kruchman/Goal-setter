@@ -1,0 +1,6 @@
+module Pods_Purpose_setter {
+  umbrella header "Pods-Purpose setter-umbrella.h"
+
+  export *
+  module * { export * }
+}
