@@ -7,23 +7,22 @@
 
 import UIKit
 
-class FirstScreenController: UIViewController {
+final class FirstScreenController: UIViewController {
     
-    @IBOutlet weak var shortGoalButton: UIButton!
+    @IBOutlet private weak var shortGoalButton: UIButton!
     
-    @IBOutlet weak var longGoalButton: UIButton!
+    @IBOutlet private weak var longGoalButton: UIButton!
     
-    @IBOutlet weak var achievedButton: UIButton!
+    @IBOutlet private weak var achievedButton: UIButton!
     
-    @IBOutlet weak var describingLabel: UILabel!
+    @IBOutlet private weak var describingLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         ButtonEffects.applyShadowAndPressEffect(to: shortGoalButton)
-        
         ButtonEffects.applyShadowAndPressEffect(to: longGoalButton)
-        
         ButtonEffects.applyShadowAndPressEffect(to: achievedButton)
         
 

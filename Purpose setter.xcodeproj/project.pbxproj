@@ -12,6 +12,10 @@
 		799A159A2A56608800580A45 /* AchievedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799A15992A56608800580A45 /* AchievedController.swift */; };
 		799A159D2A59039F00580A45 /* ProgressBarStyler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799A159C2A59039F00580A45 /* ProgressBarStyler.swift */; };
 		799A15C12A64D1B900580A45 /* ButtonEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799A15C02A64D1B900580A45 /* ButtonEffects.swift */; };
+		79CAF7BD2AC893BF00A2111A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CAF7BB2AC893BF00A2111A /* CustomTableViewCell.swift */; };
+		79CAF7BE2AC893BF00A2111A /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79CAF7BC2AC893BF00A2111A /* CustomTableViewCell.xib */; };
+		79CAF7C42ACB172600A2111A /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79CAF7C32ACB172600A2111A /* Itim-Regular.ttf */; };
+		79CAF7C62ACB185600A2111A /* IndieFlower-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79CAF7C52ACB185600A2111A /* IndieFlower-Regular.ttf */; };
 		79D2BD502A4522B600A2181F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2BD4F2A4522B600A2181F /* AppDelegate.swift */; };
 		79D2BD522A4522B600A2181F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2BD512A4522B600A2181F /* SceneDelegate.swift */; };
 		79D2BD542A4522B600A2181F /* FirstScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2BD532A4522B600A2181F /* FirstScreenController.swift */; };
@@ -20,18 +24,20 @@
 		79D2BD5C2A4522B700A2181F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79D2BD5A2A4522B700A2181F /* LaunchScreen.storyboard */; };
 		79D2BD692A46717500A2181F /* ShortGoalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2BD682A46717500A2181F /* ShortGoalsController.swift */; };
 		79D2BD992A4A5F2F00A2181F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79D2BD972A4A5F2F00A2181F /* DataModel.xcdatamodeld */; };
-		DD19406BAEED1E78440A1FA9 /* libPods-Purpose setter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF2EF901AC56970B45A67BE /* libPods-Purpose setter.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2A281B7BCDE83CDF9775BC48 /* Pods-Purpose setter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Purpose setter.release.xcconfig"; path = "Target Support Files/Pods-Purpose setter/Pods-Purpose setter.release.xcconfig"; sourceTree = "<group>"; };
-		6EF2EF901AC56970B45A67BE /* libPods-Purpose setter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Purpose setter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		799A15952A53A8E800580A45 /* LongGoalsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongGoalsController.swift; sourceTree = "<group>"; };
 		799A15972A53AE6000580A45 /* DevidedGoalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevidedGoalController.swift; sourceTree = "<group>"; };
 		799A15992A56608800580A45 /* AchievedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievedController.swift; sourceTree = "<group>"; };
 		799A159C2A59039F00580A45 /* ProgressBarStyler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarStyler.swift; sourceTree = "<group>"; };
 		799A15B22A5A421600580A45 /* Purpose setter copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Purpose setter copy-Info.plist"; path = "/Users/kruchman/Documents/Swift/My projects/Purpose setter/Purpose setter copy-Info.plist"; sourceTree = "<absolute>"; };
 		799A15C02A64D1B900580A45 /* ButtonEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEffects.swift; sourceTree = "<group>"; };
+		79CAF7BB2AC893BF00A2111A /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		79CAF7BC2AC893BF00A2111A /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		79CAF7C32ACB172600A2111A /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Itim-Regular.ttf"; sourceTree = "<group>"; };
+		79CAF7C52ACB185600A2111A /* IndieFlower-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IndieFlower-Regular.ttf"; sourceTree = "<group>"; };
 		79D2BD4C2A4522B600A2181F /* Purpose setter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Purpose setter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D2BD4F2A4522B600A2181F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79D2BD512A4522B600A2181F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD19406BAEED1E78440A1FA9 /* libPods-Purpose setter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,29 +71,34 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		77CBA85B8B92433501091791 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6EF2EF901AC56970B45A67BE /* libPods-Purpose setter.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		799A159B2A59037000580A45 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				79D2BD552A4522B600A2181F /* Main.storyboard */,
 				799A159C2A59039F00580A45 /* ProgressBarStyler.swift */,
 				799A15C02A64D1B900580A45 /* ButtonEffects.swift */,
+				79CAF7BB2AC893BF00A2111A /* CustomTableViewCell.swift */,
+				79CAF7BC2AC893BF00A2111A /* CustomTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		799A15B32A5A4E6200580A45 /* Model */ = {
+		79CAF7C12ACB16F700A2111A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				79CAF7C22ACB170E00A2111A /* Fonts */,
+				79D2BD582A4522B700A2181F /* Assets.xcassets */,
 			);
-			path = Model;
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		79CAF7C22ACB170E00A2111A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				79CAF7C52ACB185600A2111A /* IndieFlower-Regular.ttf */,
+				79CAF7C32ACB172600A2111A /* Itim-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		79D2BD432A4522B600A2181F = {
@@ -96,9 +106,7 @@
 			children = (
 				79D2BD4E2A4522B600A2181F /* Purpose setter */,
 				79D2BD4D2A4522B600A2181F /* Products */,
-				799A15B22A5A421600580A45 /* Purpose setter copy-Info.plist */,
 				247502CF6BD3DF438ED70754 /* Pods */,
-				77CBA85B8B92433501091791 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,14 +121,15 @@
 		79D2BD4E2A4522B600A2181F /* Purpose setter */ = {
 			isa = PBXGroup;
 			children = (
-				799A15B32A5A4E6200580A45 /* Model */,
-				79D2BD962A4A5F0B00A2181F /* Data Model */,
+				79D2BD5D2A4522B700A2181F /* Info.plist */,
+				799A15B22A5A421600580A45 /* Purpose setter copy-Info.plist */,
 				79D2BD4F2A4522B600A2181F /* AppDelegate.swift */,
 				79D2BD512A4522B600A2181F /* SceneDelegate.swift */,
+				79D2BD962A4A5F0B00A2181F /* Data Model */,
+				799A159B2A59037000580A45 /* Views */,
 				79D2BD632A4524CB00A2181F /* Controllers */,
-				79D2BD582A4522B700A2181F /* Assets.xcassets */,
+				79CAF7C12ACB16F700A2111A /* Utilities */,
 				79D2BD5A2A4522B700A2181F /* LaunchScreen.storyboard */,
-				79D2BD5D2A4522B700A2181F /* Info.plist */,
 			);
 			path = "Purpose setter";
 			sourceTree = "<group>";
@@ -133,7 +142,6 @@
 				799A15952A53A8E800580A45 /* LongGoalsController.swift */,
 				799A15972A53AE6000580A45 /* DevidedGoalController.swift */,
 				799A15992A56608800580A45 /* AchievedController.swift */,
-				799A159B2A59037000580A45 /* Views */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -206,8 +214,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79CAF7C62ACB185600A2111A /* IndieFlower-Regular.ttf in Resources */,
+				79CAF7C42ACB172600A2111A /* Itim-Regular.ttf in Resources */,
 				79D2BD5C2A4522B700A2181F /* LaunchScreen.storyboard in Resources */,
 				79D2BD592A4522B700A2181F /* Assets.xcassets in Resources */,
+				79CAF7BE2AC893BF00A2111A /* CustomTableViewCell.xib in Resources */,
 				79D2BD572A4522B600A2181F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +274,7 @@
 			files = (
 				799A159A2A56608800580A45 /* AchievedController.swift in Sources */,
 				79D2BD542A4522B600A2181F /* FirstScreenController.swift in Sources */,
+				79CAF7BD2AC893BF00A2111A /* CustomTableViewCell.swift in Sources */,
 				799A15982A53AE6000580A45 /* DevidedGoalController.swift in Sources */,
 				799A15C12A64D1B900580A45 /* ButtonEffects.swift in Sources */,
 				799A15962A53A8E800580A45 /* LongGoalsController.swift in Sources */,
@@ -425,6 +437,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +466,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

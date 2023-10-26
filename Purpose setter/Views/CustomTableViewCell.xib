@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Itim-Regular.ttf">
+            <string>Itim-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="Purpose_setter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="500" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a70-U7-ydw" userLabel="background Img">
+                        <rect key="frame" x="15" y="7" width="470" height="86"/>
+                        <color key="backgroundColor" red="0.67843137249999996" green="0.76862745099999996" blue="0.80784313730000001" alpha="0.14197019867549668" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="13C-QD-Z4S" userLabel="checkMark Img">
+                        <rect key="frame" x="435" y="32.666666666666664" width="35" height="34.999999999999993"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="AJa-D7-YnA"/>
+                            <constraint firstAttribute="height" constant="35" id="JKT-aK-9Vm"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMG-CI-KEn" userLabel="customTextLabel">
+                        <rect key="frame" x="30" y="20" width="390" height="61"/>
+                        <fontDescription key="fontDescription" name="Itim-Regular" family="Itim" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="vMG-CI-KEn" secondAttribute="bottom" constant="19" id="0ev-xR-h32"/>
+                    <constraint firstAttribute="trailing" secondItem="13C-QD-Z4S" secondAttribute="trailing" constant="30" id="9Hb-PY-zQK"/>
+                    <constraint firstItem="vMG-CI-KEn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="AUf-B2-Vrl"/>
+                    <constraint firstAttribute="trailing" secondItem="a70-U7-ydw" secondAttribute="trailing" constant="15" id="Dfy-a5-rlL"/>
+                    <constraint firstAttribute="bottom" secondItem="a70-U7-ydw" secondAttribute="bottom" constant="7" id="K1I-ty-Zom"/>
+                    <constraint firstItem="vMG-CI-KEn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="ble-Om-CeX"/>
+                    <constraint firstItem="13C-QD-Z4S" firstAttribute="leading" secondItem="vMG-CI-KEn" secondAttribute="trailing" constant="15" id="buA-2B-32V"/>
+                    <constraint firstItem="a70-U7-ydw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="hna-hG-VjP"/>
+                    <constraint firstItem="13C-QD-Z4S" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="rZJ-hk-pXL"/>
+                    <constraint firstItem="a70-U7-ydw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="zy3-E2-s9g"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backgroundImgCell" destination="a70-U7-ydw" id="PA7-M3-LIr"/>
+                <outlet property="checkMarkImgCell" destination="13C-QD-Z4S" id="syY-S5-New"/>
+                <outlet property="customTextLabel" destination="vMG-CI-KEn" id="OkY-Jg-kMb"/>
+            </connections>
+            <point key="canvasLocation" x="47.328244274809158" y="20.422535211267608"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -7,9 +7,8 @@
 
 import UIKit
 import CoreData
-import SAConfettiView
 
-class LongGoalsController: UITableViewController {
+final class LongGoalsController: UITableViewController {
     
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -21,6 +20,7 @@ class LongGoalsController: UITableViewController {
         super.viewDidLoad()
         
         tableView.delegate = self
+        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
         
         loadGoals()
         
@@ -36,9 +36,9 @@ class LongGoalsController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "LongCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! CustomTableViewCell
         let goal = goalArray[indexPath.row]
-        cell.textLabel?.text = goal.title
+        cell.customTextLabel.text = goal.title
         
         return cell
         
@@ -98,18 +98,6 @@ class LongGoalsController: UITableViewController {
             self.goalArray.remove(at: indexPath.row)
             
             self.saveItems()
-            
-            // Создание и настройка SAConfettiView
-                let confettiView = SAConfettiView(frame: self.view.bounds)
-                confettiView.intensity = 0.5
-                self.view.addSubview(confettiView)
-                confettiView.startConfetti()
-                
-                // Задержка на время отображения конфетти
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                    confettiView.stopConfetti()
-                    confettiView.removeFromSuperview()
-                }
             
             complitionHandler(true)
         }

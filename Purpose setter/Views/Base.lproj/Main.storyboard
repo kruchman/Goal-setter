@@ -2,11 +2,17 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQ2-bR-sWK">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="IndieFlower-Regular.ttf">
+            <string>IndieFlower</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--First Screen Controller-->
         <scene sceneID="I6a-Cp-V6H">
@@ -16,6 +22,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="YHH-Uw-4YM">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xd9-qK-yjf">
                                 <rect key="frame" x="71.666666666666686" y="588" width="250" height="45"/>
                                 <color key="backgroundColor" red="0.9626720968262894" green="0.96555056357373736" blue="0.95212328106039001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -24,8 +33,10 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="vuK-2b-gBd"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Short term Goals"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Short term Goals">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                                 <connections>
                                     <action selector="shortGoalButtonPressed:" destination="n8V-sb-Dku" eventType="touchUpInside" id="GuY-oi-gb2"/>
                                 </connections>
@@ -38,8 +49,10 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="bbR-8h-aVv"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Achived"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Achived">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                                 <connections>
                                     <action selector="achievedButtonPressed:" destination="n8V-sb-Dku" eventType="touchUpInside" id="HSq-jh-ACl"/>
                                 </connections>
@@ -52,18 +65,18 @@
                                     <constraint firstAttribute="width" constant="250" id="jaN-a1-5sz"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Long term Goals"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Long term Goals"/>
                                 <connections>
                                     <action selector="longGoalButtonPressed:" destination="n8V-sb-Dku" eventType="touchUpInside" id="0rP-H5-cgd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describing" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STw-Qg-fnI">
-                                <rect key="frame" x="35" y="148" width="323" height="300"/>
+                                <rect key="frame" x="35" y="148" width="323" height="350"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="jGW-cP-iFs"/>
+                                    <constraint firstAttribute="height" constant="350" id="jGW-cP-iFs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="23"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -72,12 +85,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fwy-yw-Mo8" firstAttribute="top" secondItem="Xd9-qK-yjf" secondAttribute="bottom" constant="25" id="5Qg-cd-Z3A"/>
+                            <constraint firstItem="YHH-Uw-4YM" firstAttribute="top" secondItem="D0u-kx-K2g" secondAttribute="top" id="6BK-QR-mKA"/>
                             <constraint firstItem="42w-tM-o1D" firstAttribute="top" secondItem="fwy-yw-Mo8" secondAttribute="bottom" constant="25" id="7Xu-NY-6X4"/>
+                            <constraint firstItem="YHH-Uw-4YM" firstAttribute="trailing" secondItem="izn-Kk-W11" secondAttribute="trailing" id="OVU-yu-oVV"/>
                             <constraint firstItem="STw-Qg-fnI" firstAttribute="leading" secondItem="izn-Kk-W11" secondAttribute="leading" constant="35" id="ObW-dD-EUc"/>
                             <constraint firstItem="STw-Qg-fnI" firstAttribute="top" secondItem="izn-Kk-W11" secondAttribute="top" constant="45" id="UPk-26-AZh"/>
                             <constraint firstItem="Xd9-qK-yjf" firstAttribute="centerX" secondItem="D0u-kx-K2g" secondAttribute="centerX" id="by2-cw-OcJ"/>
                             <constraint firstItem="izn-Kk-W11" firstAttribute="trailing" secondItem="STw-Qg-fnI" secondAttribute="trailing" constant="35" id="cnT-GZ-VA5"/>
                             <constraint firstItem="fwy-yw-Mo8" firstAttribute="centerX" secondItem="D0u-kx-K2g" secondAttribute="centerX" id="fwg-ib-cQ7"/>
+                            <constraint firstItem="YHH-Uw-4YM" firstAttribute="leading" secondItem="izn-Kk-W11" secondAttribute="leading" id="ggJ-NV-yYi"/>
+                            <constraint firstAttribute="bottom" secondItem="YHH-Uw-4YM" secondAttribute="bottom" id="mhS-7k-80I"/>
                             <constraint firstItem="42w-tM-o1D" firstAttribute="centerX" secondItem="D0u-kx-K2g" secondAttribute="centerX" id="osW-O7-gnO"/>
                             <constraint firstItem="izn-Kk-W11" firstAttribute="bottom" secondItem="42w-tM-o1D" secondAttribute="bottom" constant="45" id="v4c-D2-8eD"/>
                         </constraints>
@@ -147,7 +164,7 @@
                         <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Goals Achieved: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cUz-94-jaI">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="23"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -236,10 +253,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <progressView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="eZf-Np-FJY">
+                        <progressView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="pbA-PM-pwR">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="4"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="progressTintColor" systemColor="systemGrayColor"/>
                         </progressView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DevideCell" id="zdc-Na-RYu">
@@ -257,6 +273,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="yiD-LF-Laf">
+                        <nil key="title"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="DSb-f2-vTS">
                             <connections>
                                 <action selector="addButtonPressed:" destination="oBP-QS-20o" id="eaE-fb-lrS"/>
@@ -264,7 +281,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="progressBar" destination="eZf-Np-FJY" id="g0M-My-qkp"/>
+                        <outlet property="progressBar" destination="pbA-PM-pwR" id="aLR-e0-Wtj"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1w-XY-8pG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -273,11 +290,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="675" height="1200"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

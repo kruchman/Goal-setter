@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class ShortGoalsController: UITableViewController {
+final class ShortGoalsController: UITableViewController {
     
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -18,6 +18,7 @@ class ShortGoalsController: UITableViewController {
         super.viewDidLoad()
         
         tableView.delegate = self
+        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
         
         loadGoals()
         
@@ -34,9 +35,9 @@ class ShortGoalsController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ShortCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! CustomTableViewCell
         let goal = goalArray[indexPath.row]
-        cell.textLabel?.text = goal.title
+        cell.customTextLabel.text = goal.title
         
         return cell
         
@@ -45,9 +46,7 @@ class ShortGoalsController: UITableViewController {
     //MARK: - TableView Delegate Methods
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         tableView.deselectRow(at: indexPath, animated: true)
-        
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {

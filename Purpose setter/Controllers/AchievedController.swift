@@ -8,8 +8,7 @@
 import UIKit
 import CoreData
 
-class AchievedController: UITableViewController {
-    
+final class AchievedController: UITableViewController {
     
     @IBOutlet weak private var achievedGoalCounter: UILabel!
     
@@ -19,6 +18,9 @@ class AchievedController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
 
         loadGoals()
         
@@ -36,11 +38,10 @@ class AchievedController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "AchievedCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! CustomTableViewCell
         let goal = goalArray[indexPath.row]
-        cell.textLabel?.text = goal.title
-        cell.contentView.layer.opacity = 0.5
-        cell.accessoryType = .checkmark
+        cell.customTextLabel.text = goal.title
+        cell.checkMarkImgCell.isHidden = false
         
             return cell
     }
@@ -52,25 +53,6 @@ class AchievedController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         
     }
-    
-//    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandler) in
-//
-//            self.context.delete(self.goalArray[indexPath.row])
-//            self.goalArray.remove(at: indexPath.row)
-//
-//            self.saveItems()
-//
-//            completionHandler(true)
-//        }
-//
-//        deleteAction.backgroundColor = .red
-//
-//        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
-//        configuration.performsFirstActionWithFullSwipe = false
-//
-//        return configuration
-//    }
 
     //MARK: - Model Manipulation Methods
 

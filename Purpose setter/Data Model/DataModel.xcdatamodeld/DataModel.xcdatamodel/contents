@@ -15,7 +15,7 @@
         <relationship name="achieved" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AchievedGoal" inverseName="longGoalAchieved" inverseEntity="AchievedGoal"/>
         <relationship name="goals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DevidedGoal" inverseName="parentLongGoal" inverseEntity="DevidedGoal"/>
     </entity>
-    <entity name="ShortGoal" representedClassName="ShortGoal" syncable="YES" codeGenerationType="class">
+    <entity name="ShortGoal" representedClassName=".ShortGoal" syncable="YES" codeGenerationType="class">
         <attribute name="done" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="title" attributeType="String"/>
     </entity>

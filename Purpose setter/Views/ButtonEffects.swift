@@ -10,6 +10,7 @@ import UIKit
 class ButtonEffects {
     
     static func applyShadowAndPressEffect(to button: UIButton) {
+        button.titleLabel?.font = UIFont(name: "IndieFlower", size: 23.0)
         // Настройка свойств тени
         button.layer.cornerRadius = 15
         button.layer.shadowColor = UIColor.black.cgColor

@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class DevidedGoalController: UITableViewController {
+final class DevidedGoalController: UITableViewController {
 
     @IBOutlet private weak var progressBar: UIProgressView!
     
@@ -29,6 +29,8 @@ class DevidedGoalController: UITableViewController {
         ProgressBarStyler.applyStyle(to: progressBar)
         
         tableView.delegate = self
+        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
+        
         calculateProgress()
         
     }
@@ -43,16 +45,11 @@ class DevidedGoalController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "DevidedCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! CustomTableViewCell
         let goal = goalArray[indexPath.row]
-        cell.textLabel?.text = goal.title
+        cell.customTextLabel.text = goal.title
         
-        if goal.done == true {
-            cell.accessoryType = .checkmark
-            cell.contentView.layer.opacity = 0.5
-        } else if goal.done == false {
-            cell.accessoryType = .none
-        }
+        addingCheckmarkIfGoalIsDone(goal: goal, for: cell)
         
         return cell
         
@@ -61,16 +58,12 @@ class DevidedGoalController: UITableViewController {
     //MARK: - TableView Delegate Methods
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
-        
         goalArray[indexPath.row].done = !goalArray[indexPath.row].done
         self.saveItems()
         
         calculateProgress()
         
         tableView.deselectRow(at: indexPath, animated: true)
-        
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -162,6 +155,16 @@ class DevidedGoalController: UITableViewController {
             progressBar.progress = progress
         } else {
             progressBar.progress = 0
+        }
+    }
+    
+    private func addingCheckmarkIfGoalIsDone(goal: DevidedGoal, for cell: CustomTableViewCell) {
+        if goal.done {
+            cell.checkMarkImgCell.isHidden = false
+            cell.contentView.layer.opacity = 0.5
+        } else {
+            cell.checkMarkImgCell.isHidden = true
+            cell.contentView.layer.opacity = 1.0
         }
     }
     
